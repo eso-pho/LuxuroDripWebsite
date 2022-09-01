@@ -4,5 +4,5 @@
 
 @font-face {
     font-family: Eva-Bold, Eva;
-    src: url("/resources/assets/fonts/Eva-Bold.ttf");
+    src: url("/resources/assets/fonts/Eva-Bold.ttf") format("truetype");
 }
