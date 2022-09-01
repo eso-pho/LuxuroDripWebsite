@@ -4,6 +4,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+//New Controller for admin Users
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,4 +34,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+
+//  Code to redirect different user to their respective pages
+
 });
