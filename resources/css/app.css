@@ -3,6 +3,5 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: Eva-Bold, Eva;
-    src: url("/resources/assets/fonts/Eva-Bold.ttf") format("truetype");
+    font-family: Pacifico-Regular
 }
