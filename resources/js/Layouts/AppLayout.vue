@@ -15,6 +15,14 @@ defineProps({
 
 const showingNavigationDropdown = ref(false);
 
+// const switchToTeam = (team) => {
+//     Inertia.put(route('current-team.update'), {
+//         team_id: team.id,
+//     }, {
+//         preserveState: false,
+//     });
+// };
+
 const logout = () => {
     Inertia.post(route('logout'));
 };
@@ -33,7 +41,7 @@ const logout = () => {
                         <div class="flex">
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
-                                <Link :href="route('home')">
+                                <Link :href="route('dashboard')">
                                     <JetApplicationMark class="block h-9 w-auto" />
                                 </Link>
                             </div>
@@ -44,7 +52,7 @@ const logout = () => {
                                     Dashboard
                                 </JetNavLink>
 
-                                <JetNavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                                <JetNavLink :href="route('dashboard')" :inactive="route().current('dashboard')">
                                     Categories
                                 </JetNavLink>
                             </div>
@@ -226,6 +234,51 @@ const logout = () => {
                                     Log Out
                                 </JetResponsiveNavLink>
                             </form>
+
+                            <!-- Team Management -->
+<!--                            <template v-if="$page.props.jetstream.hasTeamFeatures">-->
+<!--                                <div class="border-t border-gray-200" />-->
+
+<!--                                <div class="block px-4 py-2 text-xs text-gray-400">-->
+<!--                                    Manage Team-->
+<!--                                </div>-->
+
+<!--                                &lt;!&ndash; Team Settings &ndash;&gt;-->
+<!--                                <JetResponsiveNavLink :href="route('teams.show', $page.props.user.current_team)" :active="route().current('teams.show')">-->
+<!--                                    Team Settings-->
+<!--                                </JetResponsiveNavLink>-->
+
+<!--                                <JetResponsiveNavLink v-if="$page.props.jetstream.canCreateTeams" :href="route('teams.create')" :active="route().current('teams.create')">-->
+<!--                                    Create New Team-->
+<!--                                </JetResponsiveNavLink>-->
+
+<!--                                <div class="border-t border-gray-200" />-->
+
+<!--                                &lt;!&ndash; Team Switcher &ndash;&gt;-->
+<!--                                <div class="block px-4 py-2 text-xs text-gray-400">-->
+<!--                                    Switch Teams-->
+<!--                                </div>-->
+
+<!--                                <template v-for="team in $page.props.user.all_teams" :key="team.id">-->
+<!--                                    <form @submit.prevent="switchToTeam(team)">-->
+<!--                                        <JetResponsiveNavLink as="button">-->
+<!--                                            <div class="flex items-center">-->
+<!--                                                <svg-->
+<!--                                                    v-if="team.id == $page.props.user.current_team_id"-->
+<!--                                                    class="mr-2 h-5 w-5 text-green-400"-->
+<!--                                                    fill="none"-->
+<!--                                                    stroke-linecap="round"-->
+<!--                                                    stroke-linejoin="round"-->
+<!--                                                    stroke-width="2"-->
+<!--                                                    stroke="currentColor"-->
+<!--                                                    viewBox="0 0 24 24"-->
+<!--                                                ><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>-->
+<!--                                                <div>{{ team.name }}</div>-->
+<!--                                            </div>-->
+<!--                                        </JetResponsiveNavLink>-->
+<!--                                    </form>-->
+<!--                                </template>-->
+<!--                            </template>-->
                         </div>
                     </div>
                 </div>
