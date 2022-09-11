@@ -15,6 +15,15 @@ module.exports = {
             fontFamily: {
                 sans: ['Helvetica', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'navy': '#13195D',
+                'lime': '#208228',
+                'aqua': '#007984',
+                'habanero': '#A05601',
+                'rosa': '#9E2440',
+                'baigan': '#36135d',
+                'royaljade': '#135d57',
+            }
         },
     },
 
