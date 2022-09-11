@@ -12,7 +12,7 @@ import JetResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 
 <template>
     <div class="shrink-0 flex items-center">
-        <Link :href="route('dashboard')">
+        <Link :href="route('home')">
             <JetApplicationMark class="block h-9 w-auto" />
         </Link>
     </div>
