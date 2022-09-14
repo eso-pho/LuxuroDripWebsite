@@ -1,6 +1,6 @@
 <script setup>
 import { ref, reactive, nextTick } from 'vue';
-import JetButton from './Button.vue';
+import JetButton from './PrimaryButton.vue';
 import JetDialogModal from './DialogModal.vue';
 import JetInput from './Input.vue';
 import JetInputError from './InputError.vue';

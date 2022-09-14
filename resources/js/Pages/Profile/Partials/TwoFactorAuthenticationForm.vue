@@ -3,7 +3,7 @@ import { ref, computed, watch } from 'vue';
 import { Inertia } from '@inertiajs/inertia';
 import { useForm, usePage } from '@inertiajs/inertia-vue3';
 import JetActionSection from '@/Components/ActionSection.vue';
-import JetButton from '@/Components/Button.vue';
+import JetButton from '@/Components/PrimaryButton.vue';
 import JetConfirmsPassword from '@/Components/ConfirmsPassword.vue';
 import JetDangerButton from '@/Components/DangerButton.vue';
 import JetInput from '@/Components/Input.vue';

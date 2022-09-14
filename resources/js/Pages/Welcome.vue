@@ -1,5 +1,6 @@
 <script setup>
 import { Head, Link } from '@inertiajs/inertia-vue3';
+import Header from '@/Components/Header.vue';
 import AppLayout from '@/Layouts/AppLayout.vue';
 
 defineProps({

@@ -1,13 +1,6 @@
 <script setup>
-// import { ref } from 'vue';
-// import { Inertia } from '@inertiajs/inertia';
 import { Head, Link } from '@inertiajs/inertia-vue3';
 import JetApplicationMark from '@/Components/ApplicationMark.vue';
-// import JetBanner from '@/Components/Banner.vue';
-// import JetDropdown from '@/Components/Dropdown.vue';
-// import JetDropdownLink from '@/Components/DropdownLink.vue';
-// import JetNavLink from '@/Components/NavLink.vue';
-// import JetResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 </script>
 
 <template>
@@ -15,6 +8,16 @@ import JetApplicationMark from '@/Components/ApplicationMark.vue';
         <Link :href="route('Welcome')">
             <JetApplicationMark class="block h-9 w-auto" />
         </Link>
+    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+        <div v-if="canLogin" class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+            <Link v-if="$page.props.user" :href="route('dashboard')" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</Link>
+
+            <template v-else>
+                <Link :href="route('login')" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</Link>
+                <Link v-if="canRegister" :href="route('register')" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</Link>
+            </template>
+        </div>
+    </div>
     </div>
 </template>
 

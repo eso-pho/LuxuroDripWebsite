@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import { useForm } from '@inertiajs/inertia-vue3';
 import JetActionMessage from '@/Components/ActionMessage.vue';
 import JetActionSection from '@/Components/ActionSection.vue';
-import JetButton from '@/Components/Button.vue';
+import JetButton from '@/Components/PrimaryButton.vue';
 import JetDialogModal from '@/Components/DialogModal.vue';
 import JetInput from '@/Components/Input.vue';
 import JetInputError from '@/Components/InputError.vue';

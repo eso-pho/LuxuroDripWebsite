@@ -2,7 +2,7 @@
 import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
 import JetAuthenticationCard from '@/Components/AuthenticationCard.vue';
 import JetAuthenticationCardLogo from '@/Components/AuthenticationCardLogo.vue';
-import JetButton from '@/Components/Button.vue';
+import JetButton from '@/Components/PrimaryButton.vue';
 import JetInput from '@/Components/Input.vue';
 import JetInputError from '@/Components/InputError.vue';
 import JetCheckbox from '@/Components/Checkbox.vue';
