@@ -83,7 +83,7 @@ const submit = () => {
     <!--                    Forgot your password?-->
     <!--                </Link>-->
                     <Link :href="route('register')" class="underline text-sm text-aqua-600 hover:text-aqua-900">
-                        Have an account?
+                        Don't have an account?
                     </Link>
                     <!--Log In Button-->
                     <JetButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">

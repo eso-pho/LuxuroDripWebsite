@@ -17,12 +17,13 @@ use Inertia\Inertia;
 |
 */
 //Initial View when starting app
-Route::get('/', function () {
-    return Inertia::render('Home',[
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-    ]);
-});
+//Route::get('/', function () {
+//    return Inertia::render('Home',[
+//        'canLogin' => Route::has('login'),
+//        'canRegister' => Route::has('register'),
+//    ]);
+//});
+Route::get('/',[\App\Http\Controllers\Home\HomeController::class,'index'])->name('home');
 
 //Go to Admin Dashboard
 Route::get('/admin-dashboard', function (){

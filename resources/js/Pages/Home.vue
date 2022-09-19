@@ -1,16 +1,14 @@
 <script setup>
 import { Head, Link } from '@inertiajs/inertia-vue3';
 import AppLayout from '@/Layouts/AppLayout.vue';
-import JetAuthenticationCard from '@/Components/AuthenticationCard.vue';
 import JetAuthenticationCardLogo from '@/Components/AuthenticationCardLogo.vue';
-import JetButton from '@/Components/PrimaryButton.vue';
+
 
 defineProps({
     canLogin: Boolean,
     canRegister: Boolean,
 });
 </script>
-
 <template>
     <Head title="Home" />
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gradient-to-r from-baigan-500 to-rosa-500">
