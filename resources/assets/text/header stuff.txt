@@ -1,0 +1,20 @@
+<div>
+    <JetNavLink :href="route('dashboard')">
+        Dashboard
+    </JetNavLink>
+
+    <JetNavLink :href="route('login')">
+        Log in
+    </JetNavLink>
+
+    <JetNavLink :href="route('register')">
+        Register
+    </JetNavLink>
+</div>
+
+
+<div class="flex-1">
+    <a class="btn btn-ghost normal-case text-xl" href="/">
+        <JetApplicationMark/>
+    </a>
+</div>
