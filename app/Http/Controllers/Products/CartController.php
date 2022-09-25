@@ -1,26 +1,20 @@
 <?php
 
-namespace App\Http\Controllers\Home;
+namespace App\Http\Controllers\Products;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Inertia\Inertia;
-use Illuminate\Support\Facades\Route;
 
-
-class HomeController extends Controller
+class CartController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Inertia\Response
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return Inertia::render('HomePage',[
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-    ]);
+        //
     }
 
     /**

@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('inventories', function (Blueprint $table) {
+        Schema::create('inventory', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });

@@ -11,8 +11,6 @@ import JetResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 
 defineProps({
     title: String,
-    // canLogin: Boolean,
-    // canRegister: Boolean,
 });
 
 const showingNavigationDropdown = ref(false);

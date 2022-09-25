@@ -5,7 +5,7 @@
 <template>
     <div class="w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
-            <img class="p-8 rounded-t-lg" src="resources/assets/images/apple-watch.png" alt="product_image">
+            <img class="p-8 rounded-t-lg" src="" alt="product_image">
         </a>
         <div class="px-5 pb-5">
             <a href="#">
