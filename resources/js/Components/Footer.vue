@@ -1,5 +1,4 @@
 <script setup>
-import JetApplicationLogo from '@/Components/ApplicationLogo.vue';
 </script>
 
 <template>

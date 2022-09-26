@@ -147,6 +147,22 @@ const logout = () => {
                     Accessories
                 </JetResponsiveNavLink>
             </div>
+            <div class="pt-4 pb-1 border-t border-gray-200">
+                <div class="flex items-center px-4">
+                    <div v-if="$page.props.jetstream.managesProfilePhotos" class="shrink-0 mr-3">
+                        <img class="h-10 w-10 rounded-full object-cover" :src="$page.props.user.profile_photo_url" :alt="$page.props.user.name">
+                    </div>
+
+                    <div>
+                        <div class="font-medium text-base text-gray-800">
+                            {{ $page.props.user.first_name }}
+                        </div>
+                        <div class="font-medium text-sm text-gray-500">
+                            {{ $page.props.user.email }}
+                        </div>
+                    </div>
+                </div>
+
             <div class="mt-3 space-y-1">
                 <JetResponsiveNavLink :href="route('profile.show')" :active="route().current('profile.show')">
                     Profile
@@ -159,6 +175,7 @@ const logout = () => {
                     </JetResponsiveNavLink>
                 </form>
             </div>
+        </div>
         </div>
     </nav>
 </template>

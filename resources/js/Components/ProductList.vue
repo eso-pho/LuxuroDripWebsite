@@ -1,5 +1,6 @@
 <script setup>
-
+import PrimaryButton from '@/Components/PrimaryButton.vue';
+import InfoButton from '@/Components/InfoButton.vue';
 const products = [
     {
         id: 1,
@@ -61,6 +62,10 @@ const products = [
                             <p class="mt-1 text-sm text-gray-500">{{ product.color }}</p>
                         </div>
                         <p class="text-sm font-medium text-gray-900">{{ product.price }}</p>
+                    </div>
+                    <div>
+                        <InfoButton>View Details</InfoButton>
+                        <PrimaryButton>Add to Cart</PrimaryButton>
                     </div>
                 </div>
             </div>
