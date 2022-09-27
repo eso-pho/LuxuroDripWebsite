@@ -19,7 +19,7 @@
                                 <div class="flex items-center space-x-6 lg:space-x-8">
                                     <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                                         <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
-                                            <img src="https://balenciaga.dam.kering.com/m/3eed8a0d6d9e1985/Large-YZY-MEN.jpg" alt="" class="h-full w-full object-cover object-center" />
+                                            <img src="https://www.emmasedition.com/wp-content/uploads/2018/10/DSC_3493-1440x2156.jpg" alt="" class="h-full w-full object-cover object-center" />
                                         </div>
                                         <div class="h-64 w-44 overflow-hidden rounded-lg">
                                             <img src="https://d2tc4gllfr2jwk.cloudfront.net/catalog/product/cache/4baacebb3a123e9342fd82a0a5e944af/a/_/a_779.jpg" alt="" class="h-full w-full object-cover object-center" />

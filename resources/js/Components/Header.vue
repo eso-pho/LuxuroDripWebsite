@@ -1,6 +1,7 @@
 <script setup>
 import JetApplicationMark from '@/Components/ApplicationMark.vue';
 import JetDropdownLink from '@/Components/DropdownLink.vue';
+import { Link } from '@inertiajs/inertia-vue3';
 import JetDropdown from '@/Components/Dropdown.vue';
 import JetNavLink from '@/Components/NavLink.vue';
 import JetResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
@@ -73,16 +74,18 @@ const logout = () => {
                 </JetNavLink>
             </div>
             <SearchInput/>
+
+
             <!--Right Side Stuff-->
             <div class="flex items-center">
                 <!--Cart-->
                 <JetNavLink href="#" class="mr-6 text-sm font-medium text-black dark:text-white hover:underline">Cart</JetNavLink>
 
                 <!--Dashboard-->
-<!--                <JetNavLink :href="route('dashboard')" class="mr-6 text-sm font-medium text-blue-500 dark:text-white hover:underline">Dashboard</JetNavLink>-->
+<!--                <JetNavLink :href= "route('dashboard')" class="mr-6 text-sm font-medium text-blue-500 dark:text-white hover:underline">Dashboard </JetNavLink>-->
 
                 <!--Profile-->
-                <div class="ml-3 relative">
+                <div class="ml-3 relative" v-if="$page.props.user">
                     <JetDropdown align="right" width="48">
                         <template #trigger>
                             <button v-if="$page.props.jetstream.managesProfilePhotos" class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition mr-6 text-sm font-medium text-black dark:text-white hover:underline">
@@ -111,71 +114,69 @@ const logout = () => {
                             </form>
                         </template>
                     </JetDropdown>
+
+
                 </div>
-                <!--Register-->
-<!--                <JetNavLink :href="route('register')" class="mr-6 text-sm font-medium text-blue-500 dark:text-white hover:underline">Register</JetNavLink>-->
+                <template v-else>
+                    <!--Login-->
+                    <JetNavLink :href="('login')" class="mr-6 text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">Login</JetNavLink>
 
-                <!--Login-->
-<!--                <JetNavLink :href="route('login')" class="mr-6 text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">Login</JetNavLink>-->
-
-                <!--Logout-->
-<!--                <form @submit.prevent="logout">-->
-<!--                    <JetDropdownLink as="button">-->
-<!--                        Log Out-->
-<!--                    </JetDropdownLink>-->
-<!--                </form>-->
+                    <!--Register-->
+                    <JetNavLink :href="route('register')" class="mr-6 text-sm font-medium text-grey-500 dark:text-white hover:underline">Register</JetNavLink>
+                </template>
             </div>
         </div>
+
 
 
         <!-- Responsive Navigation Menu -->
-        <div :class="{'block': showingNavigationDropdown, 'hidden': !showingNavigationDropdown}" class="sm:hidden">
-            <div class="pt-2 pb-3 space-y-1">
-                <JetResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                    Men's
-                </JetResponsiveNavLink>
+<!--        <div :class="{'block': showingNavigationDropdown, 'hidden': !showingNavigationDropdown}" class="sm:hidden">-->
+<!--            <div class="pt-2 pb-3 space-y-1">-->
+<!--                <JetResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">-->
+<!--                    Men's-->
+<!--                </JetResponsiveNavLink>-->
 
-                <JetResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                    Women's
-                </JetResponsiveNavLink>
+<!--                <JetResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">-->
+<!--                    Women's-->
+<!--                </JetResponsiveNavLink>-->
 
-                <JetResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                    Kid's
-                </JetResponsiveNavLink>
+<!--                <JetResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">-->
+<!--                    Kid's-->
+<!--                </JetResponsiveNavLink>-->
 
-                <JetResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                    Accessories
-                </JetResponsiveNavLink>
-            </div>
-            <div class="pt-4 pb-1 border-t border-gray-200">
-                <div class="flex items-center px-4">
-                    <div v-if="$page.props.jetstream.managesProfilePhotos" class="shrink-0 mr-3">
-                        <img class="h-10 w-10 rounded-full object-cover" :src="$page.props.user.profile_photo_url" :alt="$page.props.user.name">
-                    </div>
+<!--                <JetResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">-->
+<!--                    Accessories-->
+<!--                </JetResponsiveNavLink>-->
+<!--            </div>-->
+<!--            <div class="pt-4 pb-1 border-t border-gray-200">-->
+<!--                <div class="flex items-center px-4">-->
+<!--                    <div v-if="$page.props.jetstream.managesProfilePhotos" class="shrink-0 mr-3">-->
+<!--                        <img class="h-10 w-10 rounded-full object-cover" :src="$page.props.user.profile_photo_url" :alt="$page.props.user.name">-->
+<!--                    </div>-->
 
-                    <div>
-                        <div class="font-medium text-base text-gray-800">
-                            {{ $page.props.user.first_name }}
-                        </div>
-                        <div class="font-medium text-sm text-gray-500">
-                            {{ $page.props.user.email }}
-                        </div>
-                    </div>
-                </div>
+<!--                    <div>-->
+<!--                        <div class="font-medium text-base text-gray-800">-->
+<!--                            {{ $page.props.user.first_name }}-->
+<!--                        </div>-->
+<!--                        <div class="font-medium text-sm text-gray-500">-->
+<!--                            {{ $page.props.user.email }}-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
 
-            <div class="mt-3 space-y-1">
-                <JetResponsiveNavLink :href="route('profile.show')" :active="route().current('profile.show')">
-                    Profile
-                </JetResponsiveNavLink>
+<!--            <div class="mt-3 space-y-1">-->
+<!--                <JetResponsiveNavLink :href="route('profile.show')" :active="route().current('profile.show')">-->
+<!--                    Profile-->
+<!--                </JetResponsiveNavLink>-->
 
-                <!-- Authentication -->
-                <form method="POST" @submit.prevent="logout">
-                    <JetResponsiveNavLink as="button">
-                        Log Out
-                    </JetResponsiveNavLink>
-                </form>
-            </div>
-        </div>
-        </div>
+<!--                &lt;!&ndash; Authentication &ndash;&gt;-->
+<!--                <form method="POST" @submit.prevent="logout">-->
+<!--                    <JetResponsiveNavLink as="button">-->
+<!--                        Log Out-->
+<!--                    </JetResponsiveNavLink>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        </div>-->
     </nav>
 </template>

@@ -18,3 +18,42 @@
         <JetApplicationMark/>
     </a>
 </div>
+
+
+ <!--Logout-->
+<!--                <form @submit.prevent="logout">-->
+<!--                    <JetDropdownLink as="button">-->
+<!--                        Log Out-->
+<!--                    </JetDropdownLink>-->
+<!--                </form>-->
+                    <!--Profile-->
+                <div class="ml-3 relative">
+                    <JetDropdown align="right" width="48">
+                        <template #trigger>
+                            <button v-if="$page.props.jetstream.managesProfilePhotos" class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition mr-6 text-sm font-medium text-black dark:text-white hover:underline">
+                                <img class="h-8 w-8 rounded-full object-cover" :src="$page.props.user.profile_photo_url" alt="">
+                                Hi, {{ $page.props.user.first_name }}
+                            </button>
+                        </template>
+
+                        <template #content>
+                            <!-- Account Management -->
+                            <div class="block px-4 py-2 text-xs text-gray-400">
+                                Manage Account
+                            </div>
+
+                            <JetDropdownLink :href="route('profile.show')">
+                                Profile
+                            </JetDropdownLink>
+
+                            <div class="border-t border-gray-100" />
+
+                            <!-- Authentication -->
+                            <form @submit.prevent="logout">
+                                <JetDropdownLink as="button">
+                                    Log Out
+                                </JetDropdownLink>
+                            </form>
+                        </template>
+                    </JetDropdown>
+                </div>
