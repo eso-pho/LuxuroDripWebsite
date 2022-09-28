@@ -4,14 +4,15 @@ import Header from '@/Components/Header.vue';
 import Footer from '@/Components/Footer.vue';
 import PromoSection from '@/Components/PromoSection.vue';
 import ProductList from '@/Components/ProductList.vue';
-
+import Chatbot from '@/Components/Chatbot.vue';
 </script>
 
 <template>
     <Head title="Home"/>
-    <Header></Header>
+    <Header/>
     <PromoSection/>
     <ProductList/>
     <ProductList/>
-    <Footer></Footer>
+    <Chatbot/>
+    <Footer/>
 </template>

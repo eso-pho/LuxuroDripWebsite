@@ -79,7 +79,7 @@ const logout = () => {
             <!--Right Side Stuff-->
             <div class="flex items-center">
                 <!--Cart-->
-                <JetNavLink href="#" class="mr-6 text-sm font-medium text-black dark:text-white hover:underline">Cart</JetNavLink>
+                <JetNavLink href="#" class="mr-6 text-sm font-medium text-black dark:text-white hover:underline"> <font-awesome-icon icon="cart"> Cart</font-awesome-icon></JetNavLink>
 
                 <!--Dashboard-->
 <!--                <JetNavLink :href= "route('dashboard')" class="mr-6 text-sm font-medium text-blue-500 dark:text-white hover:underline">Dashboard </JetNavLink>-->
